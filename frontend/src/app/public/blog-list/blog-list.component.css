@@ -1,0 +1,23 @@
+.head{
+  color: rgb(199, 193, 193);
+  text-align: center;
+  background-color: black;
+  height: 20%;
+  margin: 0%;
+  padding: 0%;
+}
+.blogs{
+  height:80%;
+  background-color: black;
+}
+h2{
+  padding: 6%;
+}
+mat-card{
+  background-color: rgb(139, 133, 133);
+  margin: 0% 22% 2% 22%;
+  width: 56%;
+  height: 100px;
+  color: rgb(31, 44, 44);
+  text-align: center;
+}

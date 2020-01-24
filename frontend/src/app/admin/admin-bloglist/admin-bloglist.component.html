@@ -1,0 +1,29 @@
+<div class="whole">
+  <mat-card class="outer">
+  <mat-card-title>
+      LIST OF BLOGS
+  </mat-card-title>
+  <mat-card-content>
+          <ul>
+              <li *ngFor="let d of data">
+                  <mat-card class="inner">
+                     <mat-card-title> {{d.Heading}} </mat-card-title>
+                     <mat-card-subtitle>{{d.Subheading}}</mat-card-subtitle>
+                     <!-- <b> Offer's Subheading:</b> {{d.Subheading}} <br> -->
+                     <mat-card-content>
+                     {{d.Text}} <br> <br>
+
+                     <!-- {{d._id}} -->
+                     <img [src]="linkImg(d.image)" alt="Image" style="width: 500px; height: 250px;"> <br><br>
+                  <br> <br>
+                  {{d.createdDate}} <br> <br>
+                  <!-- <button mat-raised-button class="up" (click)="updateoffer(d.id);"> <a [routerLink]="['/editoffer', d.id]" routerLinkActive="router-link-active"></a> Update </button> -->
+                  <button mat-raised-button class="del" (click)="deleteblog(d._id);">Delete</button>
+              </mat-card-content>
+               </mat-card>
+              </li>
+          </ul>
+  </mat-card-content>
+  <button mat-raised-button class="back"><a routerLink="/harsh@admin@harsh1403@12213">Back</a> </button>
+</mat-card>
+</div>

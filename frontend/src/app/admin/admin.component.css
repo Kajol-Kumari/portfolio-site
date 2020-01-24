@@ -1,0 +1,50 @@
+a{
+  text-decoration: none;
+  color: rgb(114, 104, 28);
+}
+a:hover{
+  color: white;
+}
+.whole{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(21, 26, 22);
+  color: rgb(147, 152, 160);;
+}
+.header{
+  text-align: center;
+  padding-top: 2.5%;
+  height: 16%;
+}
+hr{
+  width: 80%;
+  margin: auto;
+}
+.menu{
+  height: 65%;
+}
+.div1,.div3{
+  display: flex;
+}
+.div2 mat-card{
+  margin: auto;
+  height: 110px
+}
+mat-card{
+  background-color: rgb(167, 167, 167);
+  width: 40%;
+  /* height: 110px; */
+  margin: 2% 10% 2% 10%;
+  text-align: center;
+}
+mat-card-content{
+  font-size: 18px;
+  color: rgb(54, 54, 54);
+}
+.footer{
+  background-color: rgb(71, 121, 116);
+  text-align: center;
+  height: 13%;
+  color: white;
+  font-size: 18px;
+}
