@@ -11,6 +11,7 @@ import { AdminBloglistComponent } from './admin/admin-bloglist/admin-bloglist.co
 import { AdminContactlistComponent } from './admin/admin-contactlist/admin-contactlist.component';
 import { AdminAddpicComponent } from './admin/admin-addpic/admin-addpic.component';
 import { AdminViewpicComponent } from './admin/admin-viewpic/admin-viewpic.component';
+import { GallaryComponent } from './public/gallary/gallary.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'about', component: AboutComponent},
   {path: 'blog_list', component: BlogListComponent},
-  {path: 'blog_detail', component: BlogDetailComponent}
+  {path: 'blog_detail', component: BlogDetailComponent},
+  {path: 'gallary', component: GallaryComponent}
 ];
 
 @NgModule({

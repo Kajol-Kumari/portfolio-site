@@ -29,6 +29,7 @@ import { AdminContactlistComponent } from './admin/admin-contactlist/admin-conta
 import { AdminAddpicComponent } from './admin/admin-addpic/admin-addpic.component';
 import { AdminViewpicComponent } from './admin/admin-viewpic/admin-viewpic.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GallaryComponent } from './public/gallary/gallary.component';
 
 
 
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     AdminBloglistComponent,
     AdminContactlistComponent,
     AdminAddpicComponent,
-    AdminViewpicComponent
+    AdminViewpicComponent,
+    GallaryComponent
   ],
   imports: [
     BrowserModule,

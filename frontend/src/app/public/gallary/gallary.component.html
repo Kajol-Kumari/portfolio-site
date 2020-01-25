@@ -1,0 +1,25 @@
+<div class="whole">
+  <mat-card class="outer">
+  <mat-card-title>
+      MY GALLARY
+  </mat-card-title>
+  <mat-card-content>
+          <ul>
+              <li *ngFor="let d of data">
+                  <mat-card class="inner">
+                     <mat-card-title> {{d.Heading}} </mat-card-title>
+                     <mat-card-content>
+                     <br> <br>
+                     <img [src]="linkImg(d.image)" alt="Image" style="width: 65%; height: 40%; margin-left: 12%;">
+                     <br><br>
+                     <mat-card-subtitle>{{d.Subheading}}</mat-card-subtitle>
+                  <br> <br> <br>
+                  {{d.createdDate}} <br> <br>
+              </mat-card-content>
+               </mat-card>
+              </li>
+          </ul>
+  </mat-card-content>
+  <button mat-raised-button class="back"><a routerLink="/">Back</a> </button> <br> <br>
+</mat-card>
+</div>

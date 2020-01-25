@@ -7,11 +7,13 @@
           <ul>
               <li *ngFor="let d of data">
                   <mat-card class="inner">
-                     <mat-card-title>NAME:  {{d.Name}} </mat-card-title>
-                     <mat-card-subtitle>EMAIL ID: {{d.Email}}</mat-card-subtitle>
-                     <mat-card-content>
-                     MESSAGE: {{d.Text}} <br> <br>
-                    DATE: {{d.createdDate}} <br> <br>
+                     <!-- <mat-card-title>NAME:  {{d.Name}} </mat-card-title>
+                     <mat-card-subtitle>EMAIL ID: {{d.EmailId}}</mat-card-subtitle> -->
+                     <mat-card-content>  <br> <br>
+                      <b>NAME:</b>  {{d.Name}} <br> <br>
+                      <b>EMAIL ID:</b> {{d.EmailId}} <br> <br>
+                     <b>MESSAGE:</b> {{d.Message}} <br> <br>
+                    <b>{{d.createdDate}}</b> <br> <br>
               </mat-card-content>
                </mat-card>
               </li>

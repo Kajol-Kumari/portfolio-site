@@ -1,7 +1,7 @@
 export interface ContactData {
-  Email: string;
+  EmailId: string;
   Name: string;
-  Text: string;
+  Message: string;
   createdDate: string;
   id: string;
 }

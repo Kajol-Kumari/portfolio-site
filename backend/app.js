@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 
 
   //Sendgrid for mailing test
-// app.post("http://localhost:4200/sendmail",(req,res) => {
+// app.post("http://localhost:3000/contact/sendmail",(req,res) => {
 //     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 //     let user = req.body;
 //     const msg = {

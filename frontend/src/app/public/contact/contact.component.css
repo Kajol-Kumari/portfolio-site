@@ -25,9 +25,9 @@ mat-form-field{
 mat-card {
   /* background-color: rgb(54, 78, 57); */
 
-  background-color: rgb(44, 65, 65);
+  background-color: rgb(180, 184, 184);
   width: 60%;
-  margin: 8% 20% 3% 20%;
+  margin: 8% 20% 4% 20%;
   letter-spacing: .8px;
   color: rgb(243, 226, 194);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

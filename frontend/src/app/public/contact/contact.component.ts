@@ -36,6 +36,27 @@ export class ContactComponent implements OnInit {
     fd.append('email', form.value.email );
     fd.append('message', form.value.message );
 
+    const data: ContactData = {
+      name: form.value.name,
+      email: form.value.email,
+      message: form.value.message,
+      html,
+      date
+      };
+
+    this.http.post('http://localhost:3000/api/contact/sendmail', data).subscribe(
+      doc => {
+        const res: any = doc;
+        console.log(
+          `${data.name} is successfully register and mail has been sent!`
+        );
+      },
+      err => {
+        console.log(err);
+      }
+    );
+
+
     this.http.post('http://localhost:3000/api/contact/contact_register', fd).subscribe(() => {
         }, error => {
           console.log(error);
