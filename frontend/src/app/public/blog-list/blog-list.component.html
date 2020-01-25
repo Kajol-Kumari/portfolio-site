@@ -1,13 +1,23 @@
-<div class="head">
-  <h2>MY BLOGS</h2>
-</div>
-<div class="blogs">
-    <mat-card>
-      <mat-card-title>
-        Title goes here
-      </mat-card-title>
-      <mat-card-content>
-        
-      </mat-card-content>
-   </mat-card>
+<div class="whole">
+  <mat-card class="outer">
+  <mat-card-title>
+      LIST OF BLOGS
+  </mat-card-title>
+  <mat-card-content>
+          <ul>
+              <li *ngFor="let d of data">
+                  <mat-card class="inner">
+                     <mat-card-title> {{d.Heading}} </mat-card-title> <br> <br>
+                     <mat-card-subtitle>{{d.Subheading}}</mat-card-subtitle>
+                     <mat-card-content>
+                     <br> <br>
+                   <span class="date">{{d.createdDate}}</span>
+                  <button mat-raised-button class="del" (click)="detailBlog(d._id);">View</button>
+              </mat-card-content>
+               </mat-card>
+              </li>
+          </ul>
+  </mat-card-content>
+  <button mat-raised-button class="back"><a routerLink="/">Back</a> </button>
+</mat-card>
 </div>

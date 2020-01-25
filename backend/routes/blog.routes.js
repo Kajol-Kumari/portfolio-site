@@ -1,5 +1,4 @@
 const express=require("express");
-const mongoose = require('mongoose');
 const router = express.Router();
 const formidable = require('formidable');
 const mv= require("mv");
@@ -31,11 +30,11 @@ router.get("/getblog/:id", function(req, res){
 router.post('/admin@harsh@1403/blogregister',(req, res,next) => {
    var form = new formidable.IncomingForm();
    form.parse(req, function(err, fields, files) {
-       console.log("In function");
+    //    console.log("In function");
        var oldpath = files.image.path;
        var newpath = upload_path + files.image.name;
        mv(oldpath,newpath, function(err){
-           console.log("processing data");
+        //    console.log("processing data");
            if(err) throw err;
            var newblog = new blogModel();
            newblog.Heading = fields.Heading;
@@ -43,7 +42,7 @@ router.post('/admin@harsh@1403/blogregister',(req, res,next) => {
            newblog.Text = fields.Text;
            newblog.image = files.image.name;
            newblog.save();
-           console.log("saved!");
+        //    console.log("saved!");
            res.send("Blog registered Successfully!");
        })
    }); 

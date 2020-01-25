@@ -1,0 +1,45 @@
+.whole{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(122, 118, 118);
+  color: white;
+}
+.outer {
+  background-color: rgb(20, 20, 20);
+  padding: 5%;
+  color: white;
+}
+mat-card-title, mat-card-subtitle {
+  text-align: center;
+}
+mat-card-title{
+  font-size: 30px;
+  padding-top: 10px;
+}
+mat-card-subtitle{
+  font-size: 18px;
+}
+.inner {
+  background-color: rgb(214, 210, 210);
+  margin: 4% 1% 1% 1%;
+}
+.inner mat-card-content {
+  margin-left: 10%;
+  padding-bottom: 5%;
+  font-size: 18px;
+}
+
+li {
+  list-style: none;
+  margin: 5% 10% 5% 10%;
+}
+.back{
+  float: right;
+}
+a{
+  text-decoration: none;
+}
+.del{
+  margin: 8px;
+  background-color: rgb(180, 209, 245);
+}

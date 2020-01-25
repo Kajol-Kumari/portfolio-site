@@ -36,21 +36,21 @@ app.get("/", (req, res) => {
 
 
   //Sendgrid for mailing test
-app.post("http://localhost:4200/sendmail",(req,res) => {
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    let user = req.body;
-    const msg = {
-        to: 'kajolkumarisingh222@gmail.com',
-        from: 'singhkajolkumari22@example.com',
-        subject: "New Message for you Harsh 😃",
-        text: 'Testing the sendGrid feature :)',
-        html: `<strong> <h3>${user.name}</h3>
-                        <h4>${user.email}</h4>
-                        <h4>${user.message}</h4>
-                </strong>`,
-      };
-      sgMail.send(msg);
-});
+// app.post("http://localhost:4200/sendmail",(req,res) => {
+//     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+//     let user = req.body;
+//     const msg = {
+//         to: 'kajolkumarisingh222@gmail.com',
+//         from: 'singhkajolkumari22@example.com',
+//         subject: "New Message for you Harsh 😃",
+//         text: 'Testing the sendGrid feature :)',
+//         html: `<strong> <h3>${user.name}</h3>
+//                         <h4>${user.email}</h4>
+//                         <h4>${user.message}</h4>
+//                 </strong>`,
+//       };
+//       sgMail.send(msg);
+// });
 
 
 app.listen(port,() =>{
@@ -59,6 +59,6 @@ app.listen(port,() =>{
 
 app.use('/api/blog', AdminBlogRoutes);
 app.use('/api/contact',AdminContactRoutes);
-app.use('/app/gallary',AdminGallaryRoutes);
+app.use('/api/gallary',AdminGallaryRoutes);
 app.use('/Images/',express.static('Images/'));
 module.exports = app;

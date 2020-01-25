@@ -1,1 +1,26 @@
-<p>admin-viewpic works!</p>
+<div class="whole">
+  <mat-card class="outer">
+  <mat-card-title>
+      MY GALLARY
+  </mat-card-title>
+  <mat-card-content>
+          <ul>
+              <li *ngFor="let d of data">
+                  <mat-card class="inner">
+                     <mat-card-title> {{d.Heading}} </mat-card-title>
+                     <mat-card-content>
+                     <br> <br>
+                     <img [src]="linkImg(d.image)" alt="Image" style="width: 60%; height: 40%; margin-left: 15%;">
+                     <br><br>
+                     <mat-card-subtitle>{{d.Subheading}}</mat-card-subtitle>
+                  <br> <br> <br>
+                  {{d.createdDate}} <br> <br>
+                  <button mat-raised-button class="del" (click)="deletepic(d._id);">Delete</button>
+              </mat-card-content>
+               </mat-card>
+              </li>
+          </ul>
+  </mat-card-content>
+  <button mat-raised-button class="back"><a routerLink="/harsh@admin@harsh1403@12213">Back</a> </button>
+</mat-card>
+</div>

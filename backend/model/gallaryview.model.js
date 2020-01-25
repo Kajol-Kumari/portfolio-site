@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 const gallarySchema = mongoose.Schema({
     Heading: {type: String},
+    Subheading:{type: String},
     image: {type: String},
     createdDate: {type: Date, default: Date.now}
 });

@@ -1,1 +1,40 @@
-<p>admin-addpic works!</p>
+<mat-card class="outercard">
+  <mat-card-title>
+      ADD PICTURE TO YOUR GALLARY
+    </mat-card-title>
+<mat-card class="innercard">
+      <form (ngSubmit)="Picreg(SignupForm)" #SignupForm="ngForm">
+        <mat-form-field>
+          <input type="text"
+                  matInput
+                  name="heading"
+                  ngModel
+                  placeholder="Picture Heading"
+                  #head= "ngModel" required>
+          <mat-error *ngIf="head.invalid">Please Enter the Pic Heading!</mat-error>
+        </mat-form-field> <br> <br>
+
+        <mat-form-field>
+            <input type="text"
+                    matInput
+                    name="subheading"
+                    ngModel
+                    placeholder="Picture Subheading(if any)"
+                    #subhead= "ngModel">
+            <mat-error *ngIf="subhead.invalid">Please Enter the subheading(if any)!</mat-error>
+          </mat-form-field> <br><br>
+
+            <div class="img" >
+              <h4>Please choose your image file</h4>
+              <input type="file" name="image" (change)="selectedImage($event)">
+            </div> <br> <br>
+
+          <div class="butn">
+          <button mat-button><b>Submit</b></button>
+        </div>
+      </form> <br>
+      <span style="float: right;" class="backbutn"><button mat-raised-button>
+        <a routerLink="/harsh@admin@harsh1403@12213">Back</a>
+      </button></span>
+</mat-card>
+</mat-card>

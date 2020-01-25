@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {NgForm, FormBuilder} from '@angular/forms';
 import { Router } from '@angular/router';
 import { ContactData } from './contact.models';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-contact',
@@ -10,17 +12,16 @@ import { ContactData } from './contact.models';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private router: Router, private fb: FormBuilder) { }
+  constructor(public router: Router, public http: HttpClient) { }
 
   ngOnInit() {
   }
-  processForm(form: NgForm) {
+  ContactReg(form: NgForm) {
     const allInfo =
       `My name is ${form.value.name}.
     My email is ${form.value.email}.
     My message is ${form.value.message}`;
     alert(allInfo);
-    // Store the details in firebase
     if (form.valid) {
     const {name, email, message} = form.value;
     const date = Date();
@@ -30,30 +31,16 @@ export class ContactComponent implements OnInit {
       <div>Date: ${date}</div>
       <div>Message: ${message}</div>
     `;
-    const data: ContactData = {
-    name: form.value.name,
-    email: form.value.email,
-    message: form.value.message,
-    html,
-    date
-    };
-    // this.firebaseService.addmessage(data).then(res => {
-    //   form.reset();
-    // });
+    const fd = new FormData();
+    fd.append('name', form.value.name);
+    fd.append('email', form.value.email );
+    fd.append('message', form.value.message );
 
-    // this.http.sendEmail('https://harsh-kumar.com/sendmail', data).subscribe(
-    //   doc => {
-    //     const res: any = doc;
-    //     console.log(
-    //       `${data.name} is successfully register and mail has been sent!`
-    //     );
-    //   },
-    //   err => {
-    //     console.log(err);
-    //   }
-    // );
-  }
+    this.http.post('http://localhost:3000/api/contact/contact_register', fd).subscribe(() => {
+        }, error => {
+          console.log(error);
+        });
     this.router.navigate(['/']);
-    // console.log('Form Submitted!');
     }
+  }
 }

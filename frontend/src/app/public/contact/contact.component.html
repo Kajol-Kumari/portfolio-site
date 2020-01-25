@@ -4,7 +4,7 @@
   </div>
   <div class="card">
     <mat-card>
-      <form (ngSubmit)="processForm(SignupForm)" #SignupForm="ngForm" >
+      <form (ngSubmit)="ContactReg(SignupForm)" #SignupForm="ngForm" >
 
         <mat-form-field>
           <input type="text"
@@ -44,9 +44,13 @@
       </div>
       <!-- <input type="hidden" id="security" name="fx_trj_horse" value=""> -->
       </form>
+      <!-- <button mat-raised-button class="back"><a routerLink="/">Back</a> </button> -->
     </mat-card>
   </div>
-
+  <br>
+  <div class="back">
+    want to go back? <a routerLink="/">click here! </a><br> <br>
+  </div>
   <div class="footer">
     <div class="icons">
       <a href="https://www.facebook.com/profile.php?id=100009592043083"><i class="fab fa-facebook-f"></i></a>
