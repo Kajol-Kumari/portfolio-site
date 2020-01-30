@@ -15,7 +15,12 @@
                   <br> <br>
                   {{d.Text}} <br> <br> <br>
                   {{d.createdDate}} <br> <br>
-                  <button mat-raised-button class="del" (click)="deleteblog(d._id);">Delete</button>
+                  <button mat-raised-button class="del"  >
+                    <a  [queryParams]="{ params: d | json}"
+                    routerLink="/admin@harsh@1403/blog_list/{{d}}"
+                    routerLinkActive="router-link-active" (click)="deleteblog(d._id);">Delete </a>
+                  </button>
+                  <!-- <button mat-raised-button class="del" (click)="deleteblog(d._id);">Delete</button> -->
               </mat-card-content>
                </mat-card>
               </li>

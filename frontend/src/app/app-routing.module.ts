@@ -21,6 +21,8 @@ const routes: Routes = [
   {path: 'admin@harsh@1403/contact_list', component: AdminContactlistComponent},
   {path: 'admin@harsh@1403/add_pic', component: AdminAddpicComponent},
   {path: 'admin@harsh@1403/gallary', component: AdminViewpicComponent},
+  {path: 'admin@harsh@1403/blog_list/:object', component: AdminBloglistComponent, data: {object: 'object'}},
+  {path: 'admin@harsh@1403/gallary/:object', component: AdminViewpicComponent, data: {object: 'object'}},
   {path: '', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'about', component: AboutComponent},

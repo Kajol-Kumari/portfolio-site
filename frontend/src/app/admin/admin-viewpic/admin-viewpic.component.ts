@@ -25,9 +25,9 @@ export class AdminViewpicComponent implements OnInit {
       }
 
 deletepic(picId: string) {
-    console.log(picId);
-    this.http.post('http://localhost:3000/api/gallary/admin@harsh@1403/delete/:id', picId).subscribe(() => {
-        console.log('deleted');
+    const url = 'http://localhost:3000/api/gallary/admin@harsh@1403/delete/' + picId;
+    this.http.post(url, picId).subscribe(() => {
+        console.log('deleted!');
     });
 }
 

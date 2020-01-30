@@ -15,7 +15,13 @@
                      <mat-card-subtitle>{{d.Subheading}}</mat-card-subtitle>
                   <br> <br> <br>
                   {{d.createdDate}} <br> <br>
-                  <button mat-raised-button class="del" (click)="deletepic(d._id);">Delete</button>
+                  <button mat-raised-button class="del"  >
+                    <a  [queryParams]="{ params: d | json}"
+                    routerLink="/admin@harsh@1403/gallary/{{d}}"
+                    routerLinkActive="router-link-active" (click)="deletepic(d._id);">Delete </a>
+                  </button>
+
+                  <!-- <button mat-raised-button class="del" (click)="deletepic(d._id);">Delete</button> -->
               </mat-card-content>
                </mat-card>
               </li>

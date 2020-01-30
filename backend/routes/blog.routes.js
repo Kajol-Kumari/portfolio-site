@@ -52,10 +52,10 @@ router.post('/admin@harsh@1403/blogregister',(req, res,next) => {
 router.post('/admin@harsh@1403/delete/:id',(req, res,next) => {
 
     const id = req.params.id;
-    console.log(id);
+    // console.log(id);
     blogModel.findOneAndRemove({ _id: id }, function (err) {
         if (err) {
-            console.log(err)
+            console.log(err);
             res.status(500).send()
         }
         else {

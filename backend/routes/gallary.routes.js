@@ -35,7 +35,7 @@ router.post("/admin@harsh@1403/picregister", app.post("/admin@harsh@1403/picregi
 }));
 
 //deleting the pic from gallary
-router.post('/delete/:id', app.post("/admin@harsh@1403/delete/:id",(req, res) => {
+router.post('/admin@harsh@1403/delete/:id',(req, res, next) => {
     const id = req.params.id;
     gallaryModel.findOneAndRemove({_id:id}, function(err){
         if(err){
@@ -46,6 +46,6 @@ router.post('/delete/:id', app.post("/admin@harsh@1403/delete/:id",(req, res) =>
             res.status(200).send("Deleted successfully");
         }
     })
-}))
+})
 
 module.exports = router;

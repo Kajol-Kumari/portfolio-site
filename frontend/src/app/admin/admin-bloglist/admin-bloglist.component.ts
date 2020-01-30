@@ -25,11 +25,17 @@ export class AdminBloglistComponent implements OnInit {
             return `${this.BASE_URL}/Images/blog/${fileName}`;
           }
 
+    // deleteblog(blogId: string) {
+    //     console.log(blogId);
+    //     this.http.post('http://localhost:3000/api/blog/admin@harsh@1403/delete/:id', blogId).subscribe(() => {
+    //         console.log('deleted');
+    //     });
+    // }
     deleteblog(blogId: string) {
-        console.log(blogId);
-        this.http.post('http://localhost:3000/api/blog/admin@harsh@1403/delete/:id', blogId).subscribe(() => {
-            console.log('deleted');
-        });
-    }
+    const url = 'http://localhost:3000/api/blog/admin@harsh@1403/delete/' + blogId;
+    this.http.post(url, blogId).subscribe(() => {
+        console.log('deleted!');
+    });
+  }
 
 }
